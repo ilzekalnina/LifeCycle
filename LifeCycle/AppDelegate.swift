@@ -13,8 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
+    //app download (loading) complete
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        print(#function)
         return true
     }
 
@@ -32,6 +34,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    //called before going to background
+    func applicationWillResignActive(_ application: UIApplication) {
+        print(#function)
+    }
+    
+    //called when going to background
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        print(#function)
+    }
+    
+    //called before moving to foreground
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        print(#function)
+    }
+    
+    //called upod transition to foreground
+    func applicationDidBecomeActive(_ application: UIApplication) {
+                print(#function)
+    }
+    
+    //called upod shutdown
+    func applicationWillTerminate(_ application: UIApplication) {
+                print(#function)
+    }
 
 }
 
